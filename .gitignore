@@ -7,5 +7,7 @@ public/
 .deploy*/
 .idea/
 .idea/workspace.xml
-source/about/index/
-source/archive/index/
+.deploy_git/
+#source/about/index/
+#source/archive/index/
+public
