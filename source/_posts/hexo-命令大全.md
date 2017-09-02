@@ -1,7 +1,7 @@
 ---
 title: hexo 命令大全
 date: 2017-08-25 14:30:05
-tags:
+tags: hexo
 ---
 >Hexo 常用命令
 <pre><code>
