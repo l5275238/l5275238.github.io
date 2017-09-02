@@ -1,7 +1,7 @@
 ---
 title: vue引入bootstap和jq
 date: 2017-09-02 15:39:27
-tags: Vue
+tags: Vue之搭建自己的博客
 ---
 看了下vue的ui框架很少有自适应的，自己写CSS又觉得麻烦,网上看了下方法把bootstrap和jq
 >1,npm install jquery --save-dev 引入jq  打开package.json 看devDependencies里有没有JQ 有的话便是成功安装
