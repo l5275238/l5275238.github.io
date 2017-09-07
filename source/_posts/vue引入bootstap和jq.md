@@ -1,5 +1,5 @@
 ---
-title: vue引入bootstap和jq
+title: Vue引入bootstap和jq
 date: 2017-09-02 15:39:27
 tags: Vue之搭建自己的博客
 ---
