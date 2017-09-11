@@ -38,7 +38,9 @@ tags: Vue之搭建自己的博客
 
 又特地去网上查了下watch ；
 Vue.js 提供了一个方法 watch，它用于观察Vue实例上的数据变动。对应一个对象，键是观察表达式，值是对应回调。值也可以是方法名，或者是对象，包含选项。具体的用法可以直接看下面的示例，简单直接。
+
 >普通的watch
+
 <pre><code>
   data() {
       return {
@@ -51,6 +53,7 @@ Vue.js 提供了一个方法 watch，它用于观察Vue实例上的数据变动�
       }
   }
 </code></pre>
+
 >数组的watch
 
 <pre><code>
@@ -72,7 +75,9 @@ Vue.js 提供了一个方法 watch，它用于观察Vue实例上的数据变动�
  　　}
  }
 </code></pre>
+
 >对象的watchtips: 只要bet中的属性发生变化（可被监测到的），便会执行handler函数；
+
 <pre><code>
 data() {
 　　return {
