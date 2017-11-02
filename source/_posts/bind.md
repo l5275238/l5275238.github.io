@@ -1,7 +1,7 @@
 ---
 title: bind
 date: 2017-09-28 16:08:15
-tags:
+tags: javascript
 ---
 <pre><code>
 if (!Function.prototype.bind) {
