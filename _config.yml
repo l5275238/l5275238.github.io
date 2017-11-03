@@ -71,7 +71,7 @@ deploy:
 
      type: git
 
-     repo: ssh:git@github.com:l5275238/l5275238.github.io.git
+     repo: ssh://git@github.com:l5275238/l5275238.github.io.git
 
      branch: master
 
