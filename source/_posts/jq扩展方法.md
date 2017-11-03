@@ -5,4 +5,5 @@ tags: javaScript
 ---
 jQuery.extend：jQuery本身的扩展方法
 jQuery.fn.extent(Object) jQuery 所选对象扩展方法
+>可以理解jQuery
 

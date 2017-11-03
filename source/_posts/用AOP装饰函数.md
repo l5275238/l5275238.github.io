@@ -1,5 +1,5 @@
 ---
-title: 用AOP装饰函数
+title: 用AOP装饰函数 切面
 date: 2017-09-25 15:45:14
 tags: JavaScript
 ---
