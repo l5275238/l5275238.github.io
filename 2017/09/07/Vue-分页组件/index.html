@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Vue 分页组件 | Lee的博客 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="宅是一种生活">
+    
+    
+
+    <meta name="description" content="因为文章前台显示要用到分页，为了一个分页引入一个Ui框架又觉得不划算；所以就自己写了一个分页组件也是借鉴了网上别人demo；下面是代码  &amp;lt;template&amp;amp;gt   &amp;lt;div id=”app”&amp;amp;gt     &amp;lt;ul class=”pagination”&amp;amp;gt       &amp;lt;li&amp;amp;gt&amp;lt;a href=”javascript:void(0">
+<meta name="keywords" content="Vue之搭建自己的博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 分页组件 | Lee的博客">
+<meta property="og:url" content="http://yoursite.com/2017/09/07/Vue-分页组件/index.html">
+<meta property="og:site_name" content="Lee的博客">
+<meta property="og:description" content="因为文章前台显示要用到分页，为了一个分页引入一个Ui框架又觉得不划算；所以就自己写了一个分页组件也是借鉴了网上别人demo；下面是代码  &amp;lt;template&amp;amp;gt   &amp;lt;div id=”app”&amp;amp;gt     &amp;lt;ul class=”pagination”&amp;amp;gt       &amp;lt;li&amp;amp;gt&amp;lt;a href=”javascript:void(0">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-30T09:57:19.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue 分页组件 | Lee的博客">
+<meta name="twitter:description" content="因为文章前台显示要用到分页，为了一个分页引入一个Ui框架又觉得不划算；所以就自己写了一个分页组件也是借鉴了网上别人demo；下面是代码  &amp;lt;template&amp;amp;gt   &amp;lt;div id=”app”&amp;amp;gt     &amp;lt;ul class=”pagination”&amp;amp;gt       &amp;lt;li&amp;amp;gt&amp;lt;a href=”javascript:void(0">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lee的博客</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          宅是一种生活
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/l5275238" title="Huno on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+    
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Vue 分页组件</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-09-07" class="post-meta__date date">2017-09-07</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Vue之搭建自己的博客/">Vue之搭建自己的博客</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>因为文章前台显示要用到分页，为了一个分页引入一个Ui框架又觉得不划算；所以就自己写了一个分页组件也是借鉴了网上别人demo；<br>下面是代码<br> <pre><code><br> &lt;template&amp;gt<br>   &lt;div id=”app”&amp;gt<br>     &lt;ul class=”pagination”&amp;gt<br>       &lt;li&amp;gt&lt;a href=”javascript:void(0)” @click=”next(current-1)” :class=”{‘disabled’:page==1}”&amp;gt&laquo;&lt;/a&amp;gt&lt;/li&amp;gt<br>       &lt;li v-for=”p in grouplist”  @click=”next(p)”&amp;gt&lt;a :class=”{‘active’:current==p }” href=”javascript:void(0)”&amp;gt {{ p }}&lt;/a&amp;gt&lt;/li&amp;gt<br>       &lt;li&amp;gt&lt;a href=”javascript:void(0)” @click=”next(current+1)” :class=”{‘disabled’:page==1}”&amp;gt&raquo;&lt;/a&amp;gt&lt;/li&amp;gt<br>     &lt;/ul&amp;gt<br>   &lt;/div&amp;gt<br> &lt;/template&amp;gt</code></pre></p>
+<p> &lt;script&amp;gt</p>
+<p>   export default {<br>     data(){<br>       return {<br>         current: this.currentPage<br>       }<br>     },<br>     props: {       //props 把数据传给子组件 以下属性是组件数据的一个字段，期望从父作用域传下来。子组件需要显式地用 props 选项 声明<br>       total: {// 数据总条数<br>         type: Number, //数据类型 验证<br>         default: 0  //默认值<br>       },<br>       showPage: {// 每页显示条数<br>         type: Number,<br>         default: 10<br>       },<br>       currentPage: {// 当前页码<br>         type: Number,<br>         default: 1<br>       },<br>       pagegroup: {// 分页条数<br>         type: Number,<br>         default: 5,<br>         coerce: function (v) {     //  验证 将数据处理在返回 如果是偶数则+1<br>           v = v &amp;gt 0 ? v : 5;<br>           return v % 2 === 1 ? v : v + 1;<br>         }<br>       }<br>     },<br>     computed: {<br>       page: function () { // 总页数<br>         return Math.ceil(this.total / this.showPage);<br>       },<br>       grouplist: function () { // 获取分页页码<br>         var len = this.page, temp = [], list = [], count = Math.floor(this.pagegroup / 2)+1, center =this.current; var pagegroup=this.pagegroup-1;<br>         if (len &lt;= this.pagegroup) {<br>           while (len–) {<br>             temp.push(this.page - len);<br>           }<br>           ;<br>           return temp;<br>         }<br>         else {<br>           while (len–) {<br>             temp.push(this.page - len);<br>           }<br>           var index=temp.indexOf(center);<br>           if(index&lt;=count){<br>               var deleIndex=this.page-this.pagegroup;<br>              temp.splice(pagegroup,deleIndex,”…”);<br>           }<br>           else {<br>             if(index&lt;=this.page-count){<br>                 var deleIndex1=index-1-1;<br>                 var deleIndex2=(this.page-count-index)&amp;gt0?(this.page-count-index):0;<br>               if(deleIndex2&amp;gt0){<br>                 temp.splice(index+count-1 ,deleIndex2,”…”);<br>               }<br>               temp.splice(1,deleIndex1,”…”);</p>
+<pre><code>        }
+        else {
+            var deleIndex=this.page-this.pagegroup;
+          temp.splice(-pagegroup,deleIndex,&apos;...&apos;)
+        }
+      }
+      return temp;
+    }
+
+  }
+},
+methods: {
+  next: function (idx) {
+   if(idx&amp;gt0&amp;&amp;idx&amp;lt;=this.page){
+     this.current=idx;
+     this.$emit(&apos;pagechange&apos;, this.current);
+   }
+  }
+}
+</code></pre><p>   }<br> &lt;/script&amp;gt</p>
+<p> &lt;style&amp;gt<br>   .pagination&amp;gtli&amp;gt.active{<br>     background: #dddddd!important;<br>   }<br>   .pagination&amp;gtli&amp;gta:focus, .pagination&amp;gtli&amp;gta:hover, .pagination&amp;gtli&amp;gtspan:focus, .pagination&amp;gtli&amp;gtspan:hover{<br>     background: none;<br>   }<br>   .disabled{<br>     cursor: not-allowed;<br>   }</p>
+<p> &lt;/style&amp;gt</p>
+<p> <br> 以上是组件代码 然后 在main.js注册组件即可<br>  <pre><code><br>import pagination from ‘@/components/pagination’  //引入组件</code></pre></p>
+<p>Vue.component(‘pagination’,pagination)  //注册</p>
+<p>  </p>
+<p>  页面调用<br>  <pre><code><br> &lt;pagination :total=”total” :current-page=’current’ @pagechange=”pagechange”&amp;gt&lt;/pagination&amp;gt<br>  export default {<br>     name: ‘hello’,<br>     data () {<br>       return {<br>         msg: ‘Welcome to Your Vue.js App’,<br>         articleList:[],<br>         articleLenght:’’,<br>         total: 150,     // 记录总条数<br>         showPage: 10,   // 每页显示条数<br>         current: 1,   // 当前的页数<br>         row:1,<br>       }</code></pre></p>
+<pre><code>},
+ methods:{
+      pagechange:function (val) {
+       this.row=val;
+        getListAritic();
+
+      },}
+}
+</code></pre><p>  </p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+//            MathJax.Hub.Config({
+//                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]}
+//            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
